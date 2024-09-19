@@ -275,6 +275,7 @@ def main():
     # 配置相关信息
     confFile = 'config-230612.ini'   #项目相关配置，包括不限于登录系统的账号密码、要统计版本的提测和发布时间
     confDir = os.path.split(os.path.realpath(__file__))[0]
+    print(confDir)
     configPath = os.path.join(confDir, confFile)
     con = configparser.ConfigParser()
     con.read(configPath, encoding='utf-8')
@@ -312,6 +313,6 @@ def main():
     devResult(developerDict, scoresDict, df, filename)
     testResult(testerDict, scoresDict, df, filename)
 
-if __name__=='__main__':
-    
-    main()
+# if __name__=='__main__':
+#
+#     main()
